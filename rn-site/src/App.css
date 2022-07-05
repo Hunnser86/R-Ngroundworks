@@ -1,0 +1,9 @@
+/*------------ Main styles for the app*/
+.app{
+  min-height: 100vh;
+  background: #d7bee5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}

@@ -1,0 +1,32 @@
+.works{
+    background: url('../../media/hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+    min-height: 100vh;
+}
+
+.works h1{
+    margin-top: 0;
+}
+
+.job-card{
+    min-height: 35rem;
+}
+
+
+
+
+@media screen and (min-width: 1024px) {
+    .card-box{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 2rem;
+    }
+}
+
+
+
+
+
+

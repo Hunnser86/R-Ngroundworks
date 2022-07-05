@@ -1,0 +1,41 @@
+input{
+    font-family: inherit;
+    padding: 15px;
+    margin: 10px 0px;
+    border: 3px solid #F6D813;
+    background: #1D2529;
+    color: rgba(255, 255, 255, 0.767);
+}
+
+::placeholder{
+    color: rgba(255, 255, 255, 0.767);
+}
+
+.form_input{
+    display: flex;
+    flex-direction: column;
+    font-family: inherit;
+}
+
+span{
+   font-family: inherit;
+   font-size: 12px;
+   padding: 3px;
+   color: red;
+   display: none;
+
+}
+
+input:invalid[focused="true"]{
+    border: 1px solid red;
+}
+
+input:invalid[focused="true"] ~ span{
+  display: block;
+  text-align: center;
+  font-family: inherit;
+}
+
+label{
+    font-family: inherit;
+}

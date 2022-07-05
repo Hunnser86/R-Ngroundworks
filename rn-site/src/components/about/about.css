@@ -1,0 +1,124 @@
+
+
+h5{
+    text-align: center;
+}
+
+.section{
+    background: url('../../media/re-enforced-grass-5.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    padding-bottom: 50rem;
+    padding-top: 5rem;
+    color: #F6D813;
+    border-bottom: 10px solid #F6D813;
+}
+
+.card-wrapper{
+    height: 100vh;
+    
+}
+
+.card{
+    background-color: #fff;
+    height: 20rem;
+    width: 60%;
+    border-radius: 30px;
+    margin: 2rem auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    -webkit-box-shadow: 5px 5px 23px 5px rgba(0,0,0,0.65); 
+    box-shadow: 5px 5px 23px 5px rgba(0,0,0,0.65);
+    color: #1d2529;
+}
+
+.card h1{
+    padding-top: 1rem;
+    color: #1d2529;
+}
+
+.card img{
+    margin: 0 auto;
+    height: 4rem;
+    width: 4rem;
+    
+}
+
+.card-btn{
+    background: #F6D813;
+    border: 3px solid #1d2529;
+    color: #1D2529;
+    max-width: 15rem;
+    min-width: 15rem;
+    height: 3rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: bolder;
+    margin:0 auto;
+    display: block;
+}
+
+.card-btn:hover{
+    background: #1D2529;
+    color: #F6D813;
+    border: 3px solid #F6D813;
+}
+
+@media screen and (max-width:398px){
+    .card-btn{
+        min-width: 10rem;
+    }
+}
+
+@media screen and (min-width:940px){
+    .card-wrapper{
+        display: flex;
+        
+    }
+    .card{
+        max-width: 20rem;
+    }
+    h5{
+        font-size: x-large;
+    }
+
+    .card-btn{
+        min-width: 12rem;
+    }
+}
+
+@media screen and (min-width:940px){
+    .card-wrapper{
+        display: flex;
+    }
+    .card{
+        max-width: 12rem;
+    }
+
+
+    h5{
+        font-size: x-large;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .card-wrapper{
+        display: flex;
+        padding-bottom: 0;
+    }
+    .card{
+        max-width: 15rem;
+        padding-bottom: 5rem;
+    }
+    h5{
+        font-size: x-large;
+    }
+    .section{
+        padding-bottom: 0;
+    }
+}
