@@ -1,6 +1,7 @@
 import React from 'react';
 import '../projects_section/projects_section.css'
 import Projects from '../projects/projects'
+import { Link } from "react-router-dom"; 
 import { projectData } from '../../data/pjroject_data';
 
 function ProjectsSection() {
@@ -11,11 +12,11 @@ function ProjectsSection() {
             <div className='carousel'>
                 <Projects slides={projectData} />
             </div>
-            <a href="/pastworks">
+            <Link to="/pastworks" className='p-works'>
                 <button className='proj-btn'>
                     View More Work
                 </button>
-            </a>
+            </Link>
 
         </div>
     );

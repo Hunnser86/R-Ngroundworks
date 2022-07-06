@@ -1,8 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useRef}   from 'react'
+import emailjs from '@emailjs/browser';
 import FormInput from '../form inputs/form_inputs';
 import './contact.css'
 
 function Contact() {
+    
+    const form = useRef();   
+
+    
+
     const [values, setValues] = useState({
         firstname: "",
         lastname: "",
@@ -52,16 +58,25 @@ function Contact() {
         }
     ]
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-    };
+    
 
     const onChange = (e) => {
         setValues({ ...values, [e.target.name]: e.target.value })
     };
-    
     console.log(values)
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_30c8km9', 'template_8byarfy', form.current, '2vIikI7QBsjPQCTwT')
+          .then((result) => {
+              console.log(result.text);
+              console.log("message sent");
+              e.target.reset();
+          }, (error) => {
+              console.log(error.text);
+          });
+        };
+    
     return (
         <div className='form' id='form'>
             <h1>Contact Us</h1>
@@ -69,7 +84,7 @@ function Contact() {
                 Please fill out the form below for a free consultation
                 on any work you would like us to do for you.
             </h3>
-            <form action="" onSubmit={handleSubmit}>
+            <form ref={form} method='POST' onSubmit={sendEmail}>
                 {inputs.map(input => (
                     <FormInput
                         key={input.id}
@@ -88,10 +103,10 @@ function Contact() {
                 >    
                 </textarea>
                 
-                <button>Submit</button>
+                <button type='submit' value={'send'}>Submit</button>
             </form>
         </div>
     )
-}
+};
 
 export default Contact

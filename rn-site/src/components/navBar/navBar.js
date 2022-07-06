@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import {HiOutlineMenu} from 'react-icons/hi'
 import {HiOutlineMenuAlt1} from 'react-icons/hi'
+import { Link } from "react-router-dom"; 
 import '../navBar/navBar.css'
 
 function Nav() {
@@ -17,8 +18,8 @@ function Nav() {
                     <li><a onClick={handleClick} href="/">Home</a></li>
                     <li><a onClick={handleClick} href="#about">About</a></li>
                     <li><a onClick={handleClick} href="#projects">Projects</a></li>
-                    <li><a onClick={handleClick} href="/pastworks">Past works</a></li>
-                    <li><a onClick={handleClick} href="#form ">Contact</a></li>
+                    <Link to="/pastworks" className='p-works'>Past Works</Link>
+                    <li><a onClick={handleClick} href="#form">Contact</a></li>
                 </ul>
                 <div className="hamburger" onClick={handleClick}>
                     {click ? (<HiOutlineMenuAlt1 className='icon'/>): (<HiOutlineMenu className='icon'/>)}

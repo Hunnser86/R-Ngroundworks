@@ -74,6 +74,11 @@ h5{
         min-width: 10rem;
     }
 }
+@media screen and (max-width:430px){
+    .card{
+        min-height: 22rem;
+    }
+}
 
 @media screen and (min-width:940px){
     .card-wrapper{

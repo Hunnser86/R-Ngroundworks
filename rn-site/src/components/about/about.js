@@ -1,5 +1,6 @@
 import React from 'react'
 import {cardData} from '../../data/cardData'
+import { Link } from 'react-router-dom';
 import './about.css'
 
 
@@ -21,9 +22,9 @@ function About() {
               <h1>{card.title}</h1>
               <img src={card.image} alt="" />
               <p>{card.paragraph}</p>
-              <a href="/pastworks">
+              <Link to="/pastworks">
                 <button className='card-btn'>Find out More</button>
-              </a>
+              </Link>             
             </div>
 
           )
